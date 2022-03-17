@@ -42,7 +42,8 @@ Quit the server with CONTROL-C.
 
 - 言語設定、タイムゾーンの変更
   - setteings.py
-'''LANGUAGE_CODE = 'ja'    # デフォルト：'en-us'
+'''
+LANGUAGE_CODE = 'ja'    # デフォルト：'en-us'
 TIME_ZONE = 'Asia/Tokyo' # デフォルト：'UTC
 ''''
 
@@ -51,8 +52,8 @@ TIME_ZONE = 'Asia/Tokyo' # デフォルト：'UTC
   - django ではデフォルトで sqlite3が設定されている
 
 '''
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+¥# Database
+¥# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
