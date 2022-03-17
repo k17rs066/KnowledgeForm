@@ -46,6 +46,26 @@ Quit the server with CONTROL-C.
 TIME_ZONE = 'Asia/Tokyo' # デフォルト：'UTC
 ''''
 
+- データベースをセットアップ
+  - settings.py のデータベースに関する記述を確認
+  - django ではデフォルトで sqlite3が設定されている
+
+'''
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+'''
+
+  - テーブルの作成・修正
+    - マイグレーションという機能を活用
+    - テーブルの作成
+      - ```% python3 manage.py migrate ```
 
 
 
