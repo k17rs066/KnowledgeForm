@@ -26,6 +26,8 @@
   - python3 manage.py runserver
   - localhost:8000 にアクセス
   - この画面に遷移したら立ち上げ成功！
+
+
 '''
 Watching for file changes with StatReloader
 Performing system checks...
@@ -52,9 +54,6 @@ TIME_ZONE = 'Asia/Tokyo' # デフォルト：'UTC
   - django ではデフォルトで sqlite3が設定されている
 
 '''
-¥# Database
-¥# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
