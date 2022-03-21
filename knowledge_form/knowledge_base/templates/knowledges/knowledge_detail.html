@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django ナレッジベース</title>
+    </head>
+    <body>
+        <div>
+            <h2>{{ knowledge.title }} by {{ knowledge.created_by.username }} </h2>
+            <small>投稿日：{{ knowledge.regist_date }}</small>
+            <small>最終更新日：{{ knowledge.regist_date }}</small>
+            <p>カテゴリ：{{ knowledge.category }}</p>
+            <p>詳細：{{ knowledge.description }}</p>
+        </div>
+    </body>
+</html>

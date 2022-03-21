@@ -29,6 +29,7 @@
 
 
 '''
+
 Watching for file changes with StatReloader
 Performing system checks...
 
@@ -40,6 +41,7 @@ March 18, 2022 - 01:23:25
 Django version 4.0.2, using settings 'knowledge_form.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
+
 '''
 
 - 言語設定、タイムゾーンの変更
@@ -67,6 +69,34 @@ DATABASES = {
     - テーブルの作成
       - ```% python3 manage.py migrate ```
 
+- Django アプリケーションを作成
+  - python3 manage.py startapp knowledge_base
+  - 作成されたディレクトリは以下のようになる
 
+```
+% python3 manage.py startapp knowledge_base
+.
+┣  knowledge_form
+┃   ┠─ (略)
+┣━━━ manage.py
+┗━━━ knowledge_base
+        ┠─ __init__.py
+        ┠─ admin.py
+        ┠─ apps.py
+        ┠─ migrations/
+        ┠─ models.py
+        ┠─ tests.py
+        ┗─ views.py
 
+```
+    - admin.py：管理画面の設定を記述
+    - apps.py：アプリケーションの様々な状態にフックする処理を記述
+    - migrations/：マイグレーションファイルが生成
+    - models.py：データベーススキーマの定義
+    - tests.py：テストを記述
+    - views.py ：ビューを記述
 
+- path():
+  - 第一引数：HTTPリクエストのパスを指定
+  - 第二引数：ビュー関数を指定
+  - nameキーワード引数：URLの逆引き

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Django ナレッジベース</title>
+</head>
+<body>
+    <h1>ようこそ Django ナレッジベースへ</h1>
+    <h2>投稿一覧</h2>
+    {% if knowledges %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>投稿者</th>
+                    <th>投稿日</th>
+                    <th>タイトル</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for knowledge in knowledges %}
+                    <th>{{ knowledge.created_by.username }}</th>
+                    <th>{{ knowledge.regist_date }}</th>
+                    <th><a href="{% url 'knowledge_detail' knowledge.id %}">{{ knowledge.title }}</a></th>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>ナレッジが登録されていません。</p>
+    {% endif %}
+</body>
+</html>
